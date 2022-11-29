@@ -16,7 +16,7 @@ const Footer = () => {
             Link de Ecommercer ejemplo
           </a>
         </li>
-        <p>00:53:10 me quede en el video </p>
+        {/* <p>00:53:10 me quede en el video </p> */}
       </ul>
     </footer>
   );
