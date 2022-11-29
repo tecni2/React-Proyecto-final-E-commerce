@@ -12,24 +12,26 @@ const Home = () => {
     dispatch(getProductsThunk());
   }, []);
 
-  console.log("los", products);
+  console.log("log productos", products);
 
   return (
     <div className="container--card">
-      {products.map((product) => (
-        <div className="card-">
+      {products.map((product, id) => (
+        <div className="card-" key={id}>
           <Link to={`/products/${product.id}`}>
             <div className="container-image">
               <img src={product.productImgs[0]} alt="" />
             </div>
 
-           <div className="description">
-           <strong>{product.title}</strong>
+            <div className="description">
+              <strong>{product.title}</strong>
 
-           <p><b>Price</b></p>
-           <span>{product.price}</span>
-           </div>
-            </Link>
+              <p>
+                <b>Price</b>
+              </p>
+              <span>{product.price}</span>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
