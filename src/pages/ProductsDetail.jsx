@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { getProductsThunk, setProducts } from "../store/slices/products.slice";
@@ -7,6 +8,7 @@ const ProductsDetail = () => {
   const { id } = useParams();
 
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getProductsThunk());
   }, []);
