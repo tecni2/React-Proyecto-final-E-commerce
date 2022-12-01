@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { getProductsThunk } from "../store/slices/products.slice";
+import { Link, useParams } from "react-router-dom";
+import { getProductsThunk, setProducts } from "../store/slices/products.slice";
 
 const ProductsDetail = () => {
   const { id } = useParams();
@@ -12,14 +12,17 @@ const ProductsDetail = () => {
   }, []);
 
   const productDetail = useSelector((state) => state.products);
+  
   const products = productDetail.find(
     (productId) => productId.id === Number(id)
   );
-  const relatedproducts = productDetail.filter(
-    (productId) => productId.category?.id === productDetail.category?.id
+  const relatedProducts = productDetail.filter(
+    (productId) => productId.category.id === products.category.id && products.id != productId.id
   );
 
-  console.log("los de rela:", relatedproducts);
+  // console.log("product", products);
+
+  console.log("log relacionados:", relatedProducts);
 
   return (
     <div>
@@ -49,7 +52,32 @@ const ProductsDetail = () => {
             <button> Add to cart </button>
           </div>
         </div>
+        <hr />
+        {/* PROCTOS DE LA MISMA CATEGORIA */}
+        
+        
       </div>
+      <h3>Related Products</h3>
+      {relatedProducts.map((relatedProduct, id) => (
+      <div className="container2" key={id}>
+
+          <Link to={`/products/${relatedProduct.id}`}>
+            <div className="container-image">
+              <img src={relatedProduct.productImgs[0]} alt="" />
+            </div>
+
+            <div className="description">
+              <strong>{relatedProduct.title}</strong>
+
+              <p>
+                <b>Price</b>
+              </p>
+              <span>{relatedProduct.price}</span>
+            </div>
+          </Link>
+      </div>
+      ))}
+     
     </div>
   );
 };
