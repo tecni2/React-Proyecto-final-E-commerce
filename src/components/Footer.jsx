@@ -3,21 +3,33 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <h1>Footer</h1>
-      <ul>
-        <li>
-          <a href="https://docs.google.com/document/d/1cIKNlf3YWGxd9-3K57IC7hRYMggh8m7VKh57jr7ehM0/edit">
-            Link de las indicaciones del proyecto
+      <div class="flex-icon">
+        <div class="icon">
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
           </a>
-        </li>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
 
-        <li>
-          <a href="https://dashing-puppy-89779d.netlify.app/">
-            Link de Ecommercer ejemplo
+        <div class="icon">
+          <a
+            href="https://www.linkedin.com/in/eleazarchusmita/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
-        </li>
-        {/* <p>01:42:10 me quede en el video </p> */}
-      </ul>
+        </div>
+      </div>
     </footer>
   );
 };

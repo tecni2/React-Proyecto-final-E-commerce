@@ -104,18 +104,29 @@ header {
 
 /* FOOTER */
 
+.flex-icon {
+  display: flex;
+  gap: 30px;
+}
+.icon i {
+  color: #c4cfde;
+  font-size: 25px;
+  /* margin-right: 20px; */
+}
+
+.icon i:hover {
+  color: #ff014f;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
 footer {
-  /* position: absolute; */
-  /* bottom: 0px; */
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
   align-items: center;
   width: 100%;
-  height: 190px;
+  height: 90px;
   background-color: rgb(24, 24, 21);
-  color: rgb(245, 222, 179);
 }
 
 footer a {
@@ -124,9 +135,6 @@ footer a {
   color: rgb(245, 222, 179);
 }
 
-footer a:hover {
-  color: white;
-}
 
 /* loader  */
 
