@@ -6,6 +6,7 @@
 * 3. Added category section button panel.
 
 
-# link del proyecto: https://eleazar-chusmita-e-commerce-final.netlify.app/
+# link del proyecto: https://e-commerce-final.netlify.app/
+
 
 # Para que funciones el proyecto tienes que instalar npm i, para que instale la carpeta node_modules 
