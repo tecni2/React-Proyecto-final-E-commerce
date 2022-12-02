@@ -43,11 +43,12 @@ const Home = () => {
 
             <div className="description">
               <strong>{product.title}</strong>
-
-              <p>
-                <b>Price</b>
-              </p>
+              <p><b>Price</b></p>
               <span>{product.price}</span>
+              <div className="container-button_detail">
+              <Button className="button-product_detail" variant="success">view product detail</Button>{" "}
+              </div>
+             
             </div>
           </Link>
         </div>

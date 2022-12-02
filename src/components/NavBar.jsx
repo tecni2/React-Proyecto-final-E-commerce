@@ -4,11 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import img1 from '../images/logo.png';
 
 const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
+        <span> <img className="img-logo" src={img1} ></img> </span>
         <Navbar.Brand as={Link} to="/">
           E-commerce
         </Navbar.Brand>
