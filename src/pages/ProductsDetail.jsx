@@ -24,7 +24,7 @@ const ProductsDetail = () => {
 
   // console.log("product", products);
 
-  console.log("log relacionados:", relatedProducts);
+  // console.log("log relacionados:", relatedProducts);
 
   return (
     <div>
@@ -55,7 +55,7 @@ const ProductsDetail = () => {
           </div>
         </div>
         <hr />
-        {/* PROCTOS DE LA MISMA CATEGORIA */}
+        {/* PRODUCTOS DE LA MISMA CATEGORIA */}
         
         
       </div>
